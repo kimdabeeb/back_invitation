@@ -48,7 +48,7 @@ const HighlightedName = styled.span`
 
 const HostContainer = styled.div`
   gap: 8px;
-  font-family: HSSanTokki20-Regular, serif;
+  font-family:'GowunBatang';
 `;
 
 const HostDetails = styled.div`
@@ -63,7 +63,6 @@ const HostDetails = styled.div`
 `;
 
 const RelationText = styled.div`
-  font-style: normal;
   line-height: 26px;
   width: 50px;
   display: flex;
