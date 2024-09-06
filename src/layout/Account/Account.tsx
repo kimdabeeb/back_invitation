@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
 import AccountWrap from './AccountWrap.tsx';
-import Accordion from '@/components/Accordion.tsx';
+import Accordion from '@/layout/Account/Accordion.tsx';
 
 const Account = () => {
   const { hostInfo } = data;
@@ -33,8 +33,8 @@ const Account = () => {
 export default Account;
 
 const HostInfoWrapper = styled.div`
+  width: 95%;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 20px 0;
+  padding: 20px;
 `;

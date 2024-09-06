@@ -17,10 +17,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
     <AccordionWrapper>
       <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}</p>
-
-        <span>
-          <ExpandMore fill="#e88ca6" />
-        </span>
+        <span><ExpandMore fill="#ddd" /></span>
       </AccordionHeader>
 
       {isOpen && <AccordionContent>{children}</AccordionContent>}
@@ -31,19 +28,18 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 export default Accordion;
 
 const AccordionWrapper = styled.div`
-  font-family: 'GowunDodum';
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 `;
 
 const AccordionHeader = styled.div<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
-  cursor: pointer;
+  font-family: 'GowunDodum';
+  font-size: 0.8125rem;
   & > p {
     color: #a6a6a6;
   }
@@ -52,14 +48,13 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
     align-items: center;
     justify-content: center;
     user-select: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     transform: ${(props) => (props.isActive ? 'rotate(180deg)' : undefined)};
   }
 `;
 
 const AccordionContent = styled.div`
-  font-size: 14px;
+  font-size: .8125rem;
   text-align: justify;
-  padding: 10px 20px;
-  background-color: #ffffff;
+  padding: 10px;
 `;

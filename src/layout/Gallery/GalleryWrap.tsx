@@ -16,7 +16,7 @@ const GalleryWrap = () => {
         <PhotoGallery />
       </ImageMoreWrap>
       {!isMoreView && (
-        <PlusButton onClick={onClickImageMoreViewButton}>더보기</PlusButton>
+        <PlusButton onClick={onClickImageMoreViewButton}>more</PlusButton>
       )}
     </ContentsWrap>
   );
@@ -55,7 +55,10 @@ const WhiteGradientOverlay = styled.div`
 `;
 
 const PlusButton = styled.div`
-  font-family: 'NanumSquareNeo';
-  font-size: 1rem;
-  align-items: center;
+  font-family: 'Playpen Sans', cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8125rem;
+  color: #262626;
 `;

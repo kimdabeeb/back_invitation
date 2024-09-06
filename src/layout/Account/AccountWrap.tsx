@@ -61,7 +61,6 @@ const AccountWrap = ({
 };
 
 const Wrapper = styled.div`
-  font-family: 'NanumSquare';
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
@@ -70,6 +69,7 @@ const Wrapper = styled.div`
   }
   display: flex;
   flex-direction: column;
+  font-family: 'GowunDodum';
 `;
 
 const Info = styled.div`
@@ -78,14 +78,15 @@ const Info = styled.div`
   gap: 5px;
   margin: 5px 0;
 `;
+
 const Relation = styled.span`
-  font-family: 'Pretendard';
-  font-weight: 300;
-  color: #44484d;
+  color: #595959;
+  font-family: 'GowunBatang';
+  font-weight: bold;
 `;
+
 const Name = styled.span`
-  font-family: 'NanumSquareNeo';
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
 `;
 
 const Details = styled.div`
@@ -95,14 +96,12 @@ const Details = styled.div`
 `;
 
 const AccountInfo = styled.div`
-  font-family: 'Pretendard';
-  font-weight: 300;
 `;
+
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
   padding: 0.1em 0.2em;
-  cursor: pointer;
   gap: 2px;
   outline: none;
   box-shadow: none;
@@ -125,7 +124,6 @@ const AccountButton = styled.button`
   padding: 0 0.8em;
   width: inherit;
   font-size: 0.7rem;
-  cursor: pointer;
   gap: 2px;
   color: #1a1a1a;
   text-decoration: none;

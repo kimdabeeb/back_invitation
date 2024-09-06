@@ -1,7 +1,6 @@
 {
   "greeting": {
     "title": "000\n000",
-    "message": "000\n\n000\n000",
     "host": {
       "groom": {
         "name": "최영준",
@@ -27,12 +26,12 @@
           },
           {
             "relation": "어머니",
-            "name": "이\uDCCD\uDCCD선"
+            "name": "이  선"
           }
         ]
       }
     },
-    "eventDetail": "2025년 3월 1일(토) 15:40\n여의도 여율리 5층"
+    "eventDetail": "2025년 3월 1일(토) 3시 40분\n여의도 여율리 5층"
   },
   "hostInfo": [
     {
@@ -78,7 +77,7 @@
           "account": "123-45-678901"
         },
         {
-          "name": "이  선",
+          "name": "이   선",
           "relation": "어머니",
           "bank": "신한",
           "account": "123-45-678901"

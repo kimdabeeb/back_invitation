@@ -37,7 +37,6 @@ th,
 ul {
   margin: 0;
   padding: 0;
-  white-space: pre-line;
 }
 
 
@@ -55,10 +54,23 @@ a:active,
 a:focus,
 a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 body {
-  font-family: GowunBatang, NanumSquareR, NanumSquareNeo, Pretendard, system-ui, Helvetica, Arial, sans-serif;
+  font-family: 
+  'GowunBatang',
+  'NanumSquareLight',
+  'Pretendard',
+  'Continuous',
+  'GowunDodum',
+  'PlaypenSans',
+  'TheGirlNextDoor',
+  system-ui,
+  Helvetica,
+  Arial,
+  cursive,
+  sans-serif;
   line-height: 1.6;
   color: rgba(255, 255, 255, 255);
   font-synthesis: none;
@@ -67,6 +79,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  
   text-align: center;
   margin: 0 auto;
   padding: 0;
@@ -74,7 +87,6 @@ body {
   min-width: 320px;
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
 }
 
 ol,
@@ -82,11 +94,13 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select,
-textarea {
-  font-family: 'Pretendard', sans-serif; }
+/* ko */
+@font-face {
+  font-family: 'GowunDodum';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Ryuyanghee/GowunDodum-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'GowunBatang';
@@ -97,43 +111,27 @@ textarea {
 @font-face {
   font-family: 'GowunBatang';
   src: url('../src/assets/fonts/GowunBatang-Bold.ttf') format('truetype');
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: 'NanumSquare';
+  font-family: 'NanumSquareLight';
   src: url('../src/assets/fonts/NanumSquareL.ttf') format('truetype');
-  font-weight: 300;
 }
 
 @font-face {
   font-family: 'NanumSquare';
   src: url('../src/assets/fonts/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  src: url('../src/assets/fonts/Pretendard-Light.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Pretendard', sans-serif;
+  src: url('../src/assets/fonts/Pretendard-Regular.woff2') format('woff2');
   font-weight: 400;
 }
-
-@font-face {
-  font-family: 'NanumSquareNeo';
-  src: url('../src/assets/fonts/NanumSquareNeo-aLt.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'NanumSquareNeo';
-  src: url('../src/assets/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  src: url('../src/assets/fonts/Pretendard-Thin.ttf') format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  src: url('../src/assets/fonts/Pretendard-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-

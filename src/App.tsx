@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
-import { Heading1 } from '@/components/Text.tsx';
-import Wrapper from '@/components/Wrapper.tsx';
+import { MainTit, MainTitEn, SubTit } from '@/components/Text';
+import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
 import Account from '@/layout/Account/Account.tsx';
-import Container from '@/layout/Container.tsx';
-import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
-import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
-import Invitation from '@/layout/Invitation/Invitation.tsx';
-import Location from '@/layout/Location/Location.tsx';
-import Main from '@/layout/Main/Main.tsx';
+import FloatingBar from '@/layout/FloatingBar/FloatingBar';
+import GalleryWrap from '@/layout/Gallery/GalleryWrap';
+import Invitation from '@/layout/Invitation/Invitation';
+import Location from '@/layout/Location/Location';
+import Main from '@/layout/Main/Main';
+
 
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -40,23 +40,19 @@ function App() {
       <Container>
         <Wrapper>
           <Main />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>모시는 글</Heading1>
+          <MainTit>모시는 글</MainTit>
           <Invitation />
-        </Wrapper>
-        <Wrapper ref={galleryRef}>
-          <Heading1>Gallery</Heading1>
+        <GalleryWrapper ref={galleryRef}>
+          <MainTitEn>Gallery</MainTitEn>
           <GalleryWrap />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>마음 전하실 곳</Heading1>
+        </GalleryWrapper>
+          <SubTit>마음 전하실 곳</SubTit>
           <Account />
-        </Wrapper>
         {/* <Wrapper>
           <Heading1>오시는 길</Heading1>
           <Location />
         </Wrapper> */}
+        </Wrapper>
         <FloatingBar isVisible={isVisible} />
       </Container>
     </NavermapsProvider>
