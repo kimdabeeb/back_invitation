@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import data from 'data.json';
-import { Wrapper } from '@/components/ContentsWrap';
 import { BrideAndGroomParents } from '@/types/data.ts';
 
 const HostParents = () => {
   const { groom, bride } = data.greeting.host;
   return (
-    <Wrapper>
       <HostContainer>
         <HostInfo person={groom} />
         <HostInfo person={bride} />
       </HostContainer>
-    </Wrapper>
   );
 };
 
@@ -20,48 +17,47 @@ export default HostParents;
 
 const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
   return (
-    <HostDetails>
-      {person.parents && (
-        <>
-          {person.parents.map((parent, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && ' · '}
-              {parent.name}
-            </React.Fragment>
-          ))}
-        </>
-      )}
-      <RelationText>
-        <div>의</div>
-        <Relation>{person.relation}</Relation>
-      </RelationText>
-      <HighlightedName>{person.name}</HighlightedName>
-    </HostDetails>
+    <>
+      <HostDetails>
+        {person.parents && (
+          <>
+            {person.parents.map((parent, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && ' · '}
+                {parent.name}
+              </React.Fragment>
+            ))}
+          </>
+        )}
+        <RelationText>
+          <div>의</div>
+          <Relation>{person.relation}</Relation>
+        </RelationText>
+      </HostDetails>
+      <HighlightedName>
+        <p>{person.position}</p>
+        <p>{person.name}</p>
+      </HighlightedName>
+    </>
   );
 };
 
-const HighlightedName = styled.span`
-  font-weight: 600;
-  font-size: rem;
-  /* color: #4f4f4f; */
-  color: #eee;
-`;
-
 const HostContainer = styled.div`
-  gap: 4px;
+  width: 90%;
+  gap: 10px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin: 3rem auto 2rem;
   font-family: 'GowunBatang';
   & div > div:first-of-type {
-    font-size: 0.8125rem;
+    font-weight: 600;
   }
   & div:last-of-type > div {
     width: 40px;
     & div:last-of-type {
       margin-left: 8px;
     }
-  }
+  } 
 `;
 
 const HostDetails = styled.div`
@@ -79,7 +75,7 @@ const HostDetails = styled.div`
 `;
 
 const RelationText = styled.div`
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   line-height: 26px;
   width: 50px;
   display: flex;
@@ -89,4 +85,13 @@ const RelationText = styled.div`
 
 const Relation = styled.div`
   width: inherit;
+`;
+
+const HighlightedName = styled.div`
+  display: flex;
+  justify-content: space-between;
+  & p {
+    font-size: 0.9375rem;
+    color: #eee;
+  }
 `;

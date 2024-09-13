@@ -45,9 +45,9 @@ function App() {
         <Wrapper>
           <Main />
           <Invitation />
+          <CalendarWrap />
+          <HostParents />
         </Wrapper>
-        <CalendarWrap />
-        <HostParents />
         <GalleryWrapper ref={galleryRef}>
           <MainTitEn>Gallery</MainTitEn>
           <PhotoGallery />

@@ -5,6 +5,7 @@
       "groom": {
         "name": "최영준",
         "relation": "아들",
+        "position": "신랑",
         "parents": [
           {
             "relation": "아버지",
@@ -19,6 +20,7 @@
       "bride": {
         "name": "김다빈",
         "relation": "딸",
+        "position": "신부",
         "parents": [
           {
             "relation": "아버지",

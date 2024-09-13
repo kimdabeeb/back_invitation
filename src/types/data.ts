@@ -30,6 +30,7 @@ export interface IGreeting {
 export interface BrideAndGroomParents {
   name: string;
   relation: string;
+  position: string;
   parents: Parent;
 }
 
@@ -38,6 +39,7 @@ type Parent = { relation: string; isDeceased?: boolean; name: string }[];
 export interface BrideAndGroom {
   name: string;
   relation: string;
+  position: string;
 }
 
 export interface IHostInfo {

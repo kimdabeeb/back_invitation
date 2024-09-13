@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
 import UpNarrow from '@/assets/icons/upnarrow.png?url';
+import { SubTit } from '@/components/Text';
+
 
 const Footer = () => {
   const handleCopy = () => {
@@ -15,13 +17,13 @@ const Footer = () => {
   };
   return (
     <SnsCont>
-      <KakaoButton className="py-2 px-2" type="button">
-        <span>카카오톡으로 청첩장 전하기</span>
+      <KakaoButton type="button">
+        <SubTit>카카오톡으로 청첩장 전하기</SubTit>
         <img src={UpNarrow} />
       </KakaoButton>
-      <CopyButton className="py-2 px-2" type="button" onClick={handleCopy}>
-        <span>청첩장 주소 복사하기</span>
-        <Copy />
+      <CopyButton type="button" onClick={handleCopy}>
+        <SubTit>청첩장 주소 복사하기</SubTit>
+        <Copy fill='#fff' />
       </CopyButton>
     </SnsCont>
   );
@@ -31,40 +33,31 @@ export default Footer
 
 const SnsCont = styled.div`
   width: 100%;
+  margin:0 auto;
+  padding: 2.25rem 30px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
 `;
 
 // const UpNarrow = styled.img`
-//   /* width: 100%;
-//   padding: 10px 0;
-//   background: #fffcae;
-//   border: unset;
-//   outline: none;
-//   box-shadow: none;
-//   font-size: 0.6875rem;
-//   display: flex;
-//   align-items: center;
-//   color: #1a1a1a;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   & img {
-//     width: 35px;
-//     height: 35px;
-//   }
-//   & span {
-//     font-family: 'Pretendard', sans-serif;
-//     margin-top: 5px;
-//   } */
-// `;
 // `.withComponent('a');
 
 const KakaoButton = styled.button`
   width: 100%;
   padding: 10px 0;
   background: #fce777;
+  border: unset;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 2.2;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   & img {
     width: 14px;
     height: 14px;
@@ -74,4 +67,16 @@ const CopyButton = styled.button`
   width: 100%;
   padding: 10px 0;
   background: #c2b0a2;
+  border: unset;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 2.2;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & p {
+    color: #fff;
+  }
 `;

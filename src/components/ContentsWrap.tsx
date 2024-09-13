@@ -6,9 +6,9 @@ export const Container = styled.div`
 
 export const Wrapper = styled.section`
   width: 100%;
-  max-width: 85vw;
+  /* max-width: 85vw; */
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0 1.5rem;
   box-sizing: border-box;
   display: flex;
   align-items: center;

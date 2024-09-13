@@ -11,7 +11,7 @@ interface IAccountProps {
   kakaopayAccount?: string;
   tossAccount?: string;
 }
-const AccountWrap = ({
+const AccountDetail = ({
   name,
   relation,
   bank,
@@ -95,9 +95,6 @@ const Details = styled.div`
   justify-content: space-between;
 `;
 
-const AccountInfo = styled.div`
-`;
-
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
@@ -130,6 +127,7 @@ const AccountButton = styled.button`
   background: white;
 `.withComponent('a');
 
+
 const KakaopayImg = styled.img`
   width: 50px;
 `;
@@ -138,4 +136,6 @@ const TossImg = styled.img`
   width: 70px;
 `;
 
-export default AccountWrap;
+const AccountInfo = styled.div``;
+
+export default AccountDetail;

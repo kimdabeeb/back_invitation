@@ -19,7 +19,6 @@ const Accordion = ({ title, children }: IAccordionProps) => {
         <p>{title}</p>
         <span><ExpandMore fill="#ddd" /></span>
       </AccordionHeader>
-
       {isOpen && <AccordionContent>{children}</AccordionContent>}
     </AccordionWrapper>
   );

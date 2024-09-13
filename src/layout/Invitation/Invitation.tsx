@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
-import data from 'data.json';
 import Host from '../Contact/Host.tsx';
-import { MainTit, MainTitEn, Caption } from '@/components/Text.tsx';
 
 const Invitation = () => {
   // 식주소 const { greeting } = data;
-  const marks = ['01-03-2025'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +24,6 @@ const Invitation = () => {
   return (
     <>
       <InvitationWrapper>
-        <img src="" />
         <Fade cascade damping={0.3}>
           <ul className="IntroTit">
             <li>

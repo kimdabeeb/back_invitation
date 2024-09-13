@@ -5,3 +5,12 @@
 .swiper-slide {
   width: 100%!important;
 }
+
+.swiper-pagination-fraction {
+  position: relative!important;
+  padding: 25px 0;
+}
+
+.swiper-pagination-fraction > span {
+  font-size: .9375rem;
+}

@@ -23,7 +23,6 @@ export const SubTit = styled.p`
   font-family: 'GowunDodum';
   font-size: 0.9375rem;
   font-weight: bold;
-  padding: 0 5px;
   align-self: flex-start;
 `;
 
@@ -34,7 +33,7 @@ export const SubTitEn = styled.p`
 `;
 
 export const PointTitle = styled.p`
-  font-family: 'GowunBatang', sans-serif;
+  font-family: 'GowunBatang';
   line-height: 2;
   margin: 0;
   color: #666;
