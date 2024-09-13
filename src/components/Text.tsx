@@ -8,15 +8,15 @@ export const MainTit = styled.p`
 `;
 
 export const MainTitEn = styled.p`
-  font-family: 'The Girl Next Door', cursive;
+  font-family: 'SometimesTimes';
+  /* font-family: 'Ibarra Real Nova', serif; */
+  /* font-family: 'Gilda Display', serif; */
   font-weight: 400;
   font-style: normal;
-  /* font-family: 'Playpen Sans', cursive;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal; */
-  font-size: 1.25rem;
-  color: #000;
+  font-size: 2.5rem;
+  color: rgb(17, 17, 17);
+  opacity: 0.9;
+  margin-bottom: 3rem;
 `;
 
 export const SubTit = styled.p`
@@ -27,24 +27,20 @@ export const SubTit = styled.p`
   align-self: flex-start;
 `;
 
+export const SubTitEn = styled.p`
+  font-family: 'Autography';
+  font-size: .95rem;
+  font-weight: normal;
+`;
+
 export const PointTitle = styled.p`
-  font-family: 'Pretendard', sans-serif;
-  line-height: 1;
+  font-family: 'GowunBatang', sans-serif;
+  line-height: 2;
   margin: 0;
   color: #666;
   white-space: pre-line;
 `;
 
-export const IntroTit = styled.div`
-  font-size: 0.75rem;
-  line-height: 2;
-  & span {
-    font-size: 0.6875rem;
-  }
-  & p {
-    line-height: 3;
-  }
-`;
 
 export const Caption = styled.p<{ textAlign?: string }>`
   font-size: .9375rem;

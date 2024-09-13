@@ -9,7 +9,8 @@ const Location = () => {
   const { mapInfo } = data;
   return (
     <LocationWrapper>
-      <PointTitle>{mapInfo.address1}</PointTitle>
+      <PointTitle style={{ fontWeight: '600' }}>{mapInfo.address1}</PointTitle>
+      <PointTitle style={{ fontWeight: '400' }}>{mapInfo.address2}</PointTitle>
       <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
       <Map />
       <MapButtons />

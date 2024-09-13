@@ -17,22 +17,23 @@ export default Main;
 
 const MainImg = styled.img`
   border-radius: 200px 200px 0 0;
-  width: 90%;
+  width: 100%;
   max-width: 450px;
   padding-top: 20px;
 `;
 
 const MainTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
-  font-size: 2rem;
-  color: #2F2120;
-  line-height: 120%;
+  font-family: 'NanumSquare';
+  font-size: 1.75rem;
+  color: #2f2120;
+  line-height: 2;
   white-space: pre-line;
+  margin-bottom: 1rem;
 `;
 
 const SubTitle = styled.p`
-  font-size: 1.1rem;
-  color: #2F2120;
-  line-height: 140%;
+  font-size: 0.8125rem;
+  color: #000000;
+  line-height: 2;
   white-space: pre-line;
 `;

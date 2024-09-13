@@ -118,8 +118,6 @@ const AccountButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px;
   margin: 5px 0;
   padding: 0 0.8em;
   width: inherit;

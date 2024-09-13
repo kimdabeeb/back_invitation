@@ -1,96 +1,70 @@
-import Calendar from 'react-calendar';
-import moment from 'moment';
+import { useEffect } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
 import data from 'data.json';
 import Host from '../Contact/Host.tsx';
-import { Caption, IntroTit } from '@/components/Text.tsx';
-import 'react-calendar/dist/Calendar.css';
+import { MainTit, MainTitEn, Caption } from '@/components/Text.tsx';
 
 const Invitation = () => {
-  const { greeting } = data;
+  // 식주소 const { greeting } = data;
   const marks = ['01-03-2025'];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      document.querySelectorAll('div').forEach((item) => {
+        if (window.innerHeight > item.getBoundingClientRect().top) {
+          item.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  //direction={"up"}
   return (
     <>
       <InvitationWrapper>
-        <IntroTit>
-          마음을 같이하여 같은 사랑을 가지고 <br />
-          뜻을 합하여 한 마음을 품어 <br />
-          <span>빌립보서 2:2</span>
-          <br />
-          <br />
-          <br />
-          <p>
-            하나님의 떄에 서로 만난 두 사람이 <br />
-            은혜로 결실을 맺게 되었습니다. <br />
-            둘이 하나가 되어 평생 서로를 돕는 배필로 <br />
-            서약하는 자리에 기도와 축복으로 함께 해주신다면 <br />더 없는 감사와 기쁨으로
-            간직하겠습니다.
-          </p>
-        </IntroTit>
-        <Host />
-        <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
-        <CalendarContainer>
-          <Calendar
-            locale="ko"
-            selectRange={false}
-            calendarType="gregory"
-            showNeighboringMonth={false}
-            minDetail="month"
-            prev2Label={null}
-            next2Label={null}
-            formatDay={(local, date) => date.toLocaleString('en', { day: 'numeric' })}
-            tileClassName={({ date, view }) => {
-              if (marks.find((x) => x === moment(date).format('DD-MM-YYYY'))) {
-                return 'highlight';
-              }
-            }}
-          />
-        </CalendarContainer>
+        <img src="" />
+        <Fade cascade damping={0.3}>
+          <ul className="IntroTit">
+            <li>
+              우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
+              <br />
+              <span>요한일서 4:19</span>
+            </li>
+            <li>하나님의 떄에 서로 만난 두 사람이</li>
+            <li>은혜로 결실을 맺게 되었습니다.</li>
+            <li>둘이 하나가 되어 평생 서로를 돕는 배필로</li>
+            <li>서약하는 자리에 기도와 축복으로 함께 해주신다면</li>
+            <li>더 없는 감사와 기쁨으로간직하겠습니다.</li>
+          </ul>
+          {/* <Fade delay={2000}>
+            <Host /> 
+            <Caption textAlign={'center'}>
+              {greeting.eventDetail}
+            </Caption> 
+          </Fade> */}
+        </Fade>
+        <Fade cascade delay={2000}>
+          <Host />
+        </Fade>
       </InvitationWrapper>
       <style>{`
-      .react-calendar * {
-        text-decoration: unset!important;
-      }
-      .react-calendar {
-        font-family: GowunBatang;
-        border: none;
-        max-width: 320px;
-        width: auto;
-
-      .react-calendar__tile--active,
-      .highlight {
-        background: #fffcae;
-        border-radius: 50%;
-        max-width: 38px!important;
-      }
-      .react-calendar__navigation__label {
-        font-family: GowunBatang;
-        color:#000;
-      } 
-    
-      .react-calendar__navigation {
-        width: inherit;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        padding: 0 .5rem;
-
-          .react-calendar__navigation__label {
-            width: 5.5rem;
-            height: 1.375rem;
-            font-size: 16px;
-            border: none;
-            font-weight: 700;
-            background-color: #fff;
+        .IntroTit {
+          font-size: 0.75rem;
+          & li {
+            line-height: 3;
           }
-
-          .react-calendar__navigation button:enabled:hover, 
-          .react-calendar__navigation button:enabled:focus {
-              background-color: transparent;
+          & li:first-of-type {
+            margin-bottom: 3rem;
+            line-height: 2.5;
+            & span {
+            font-size: 0.6875rem;
           }
-      }
-    }
+        }
     `}</style>
     </>
   );
@@ -103,10 +77,5 @@ const InvitationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 50px;
-`;
-
-const CalendarContainer = styled.div`
-  width: 100%;
-  margin: 20px auto 0;
-  border-radius: 3px;
+  margin-top: 5rem;
 `;

@@ -24,15 +24,21 @@ export interface IGreeting {
     };
   };
   eventDetail: string;
+  eventDay: string;
 }
 
-export interface BrideAndGroom {
+export interface BrideAndGroomParents {
   name: string;
   relation: string;
   parents: Parent;
 }
 
 type Parent = { relation: string; isDeceased?: boolean; name: string }[];
+
+export interface BrideAndGroom {
+  name: string;
+  relation: string;
+}
 
 export interface IHostInfo {
   host: string;

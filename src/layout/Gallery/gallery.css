@@ -1,0 +1,7 @@
+.pswp__button.pswp__button--zoom {
+  display: none!important;
+}
+
+.swiper-slide {
+  width: 100%!important;
+}

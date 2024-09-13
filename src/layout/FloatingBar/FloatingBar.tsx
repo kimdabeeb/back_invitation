@@ -1,30 +1,14 @@
 
 import styled from '@emotion/styled';
-import Share from '@/assets/icons/share.svg?react';
 import Upward from '@/assets/icons/upward.svg?react';
-import Button from '@/components/Button.tsx';
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
-  const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
-      () => {
-        alert('주소가 복사되었습니다.😉😉');
-      },
-      () => {
-        alert('주소 복사에 실패했습니다.🥲🥲');
-      },
-    );
-  };
-
   const handleScroll = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <Nav isVisible={isVisible}>
-      <Button onClick={handleCopy}>
-        <Share fill="#ddd" />
-      </Button>
       <Button onClick={handleScroll}>
         <Upward fill="#ddd" />
       </Button>
@@ -45,3 +29,15 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   gap: 5px;
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
 `;
+
+const Button = styled.button`
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: none;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+`.withComponent('a');

@@ -31,12 +31,25 @@
         ]
       }
     },
-    "eventDetail": "2025년 3월 1일(토) 3시 40분\n여의도 여율리 5층"
+    "eventDetail": "2025년 3월 1일(토) 3시 40분\n여의도 여율리 5층",
+    "eventDay": "2025년 3월 1일 토요일 | 오후 15시 40분"
   },
   "hostInfo": [
     {
       "host": "신랑측",
       "accountInfo": [
+        {
+          "name": "최병홍",
+          "relation": "신랑 아버지",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "성정옥",
+          "relation": "신랑 어머니",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
         {
           "name": "최영준",
           "relation": "신랑",
@@ -44,18 +57,6 @@
           "account": "1234-56-789012",
           "kakaopayAccount": "",
           "tossAccount": ""
-        },
-        {
-          "name": "최병홍",
-          "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
-        },
-        {
-          "name": "성정옥",
-          "relation": "어머니",
-          "bank": "농협",
-          "account": "123-45-678901"
         }
       ]
     },
@@ -63,24 +64,24 @@
       "host": "신부측",
       "accountInfo": [
         {
+          "name": "김용대",
+          "relation": "신부 아버지",
+          "bank": "국민",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "이   선",
+          "relation": "신부 어머니",
+          "bank": "신한",
+          "account": "123-45-678901"
+        },
+        {
           "name": "김다빈",
           "relation": "신부",
           "bank": "신한",
           "account": "1234-5678-9012",
           "kakaopayAccount": "https://link.kakaopay.com/_/Q-ULgFw",
           "tossAccount": ""
-        },
-        {
-          "name": "김용대",
-          "relation": "아버지",
-          "bank": "국민",
-          "account": "123-45-678901"
-        },
-        {
-          "name": "이   선",
-          "relation": "어머니",
-          "bank": "신한",
-          "account": "123-45-678901"
         }
       ]
     }
@@ -96,15 +97,15 @@
   "locationInfo": [
     {
       "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5·9호선 여의도역 5번 출구 (도보 5분)"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 5호선·9호선 여의도역 5번 출구 (도보 3분)"
     },
     {
       "title": "\uD83D\uDCCD 버스",
       "desc": "\uD83D\uDC49\uD83C\uDFFB 5호선 여의도역 7번 출구 (도보 5분)\n\uD83D\uDC49\uD83C\uDFFB 9호선 여의도역 10번 출구 (도보 30초)"
     },
     {
-      "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 지하 및 여의도포스트타워 2시간 무료주차\n(안내데스크에서 주차권 수령)"
+      "title": "\uD83D\uDCCD 자차",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 내비게이션 : '웨딩여율리' 검색 \n 서울 영등포구 국제금융로6길 \n 건물 내 지하 및 여의도포스트타워 2시간 무료주차(안내데스크에서 주차권 수령)"
     }
   ]
 }
