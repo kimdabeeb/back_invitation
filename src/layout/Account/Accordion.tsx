@@ -16,7 +16,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
   return (
     <AccordionWrapper>
       <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
-        <p>{title}</p>
+        <p>{title}에게</p>
         <span><ExpandMore fill="#ddd" /></span>
       </AccordionHeader>
       {isOpen && <AccordionContent>{children}</AccordionContent>}
@@ -27,9 +27,15 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 export default Accordion;
 
 const AccordionWrapper = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 8px;
   overflow: hidden;
+  background: #f9f9f9;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  /* box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   transition: all 0.3s ease-in-out;
 `;
 

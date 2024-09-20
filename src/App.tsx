@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
-import { MainTit, MainTitEn, SubTit } from '@/components/Text';
+import { MainTitEn } from '@/components/Text';
 import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
 import Main from '@/layout/Main/Main';
 import Footer from '@/layout/Main/Footer';
@@ -9,7 +9,7 @@ import FloatingBar from '@/layout/FloatingBar/FloatingBar';
 import PhotoGallery from '@/layout/Gallery/PhotoGallery';
 import Invitation from '@/layout/Invitation/Invitation';
 import Notification from '@/layout/Notice/Notification';
-import ThanksTo from '@/layout/Notice/ThanksTo';
+import ThanksTo from '@/layout/Notice/Sendmessage';
 import Location from '@/layout/Location/Location';
 import CalendarWrap from '@/layout/Calendar/CalendarWrap';
 import HostParents from './layout/Contact/HostParents';
@@ -46,22 +46,17 @@ function App() {
           <Main />
           <Invitation />
           <CalendarWrap />
-          <HostParents />
         </Wrapper>
-        <GalleryWrapper ref={galleryRef}>
+        <HostParents />
+        <GalleryWrapper ref={galleryRef} className="pd-w">
           <MainTitEn>Gallery</MainTitEn>
           <PhotoGallery />
         </GalleryWrapper>
-        <MainTitEn>Location</MainTitEn>
-        {/* <Wrapper>
-          <Heading1>lOCATION</Heading1>
-          <Location />
-        </Wrapper> */}
         <Wrapper>
+          <Location />
           <Notification />
           {/* <SubTit></SubTit> */}
           <Account />
-          <MainTitEn>Thanks to</MainTitEn>
           <ThanksTo />
         </Wrapper>
         <Footer />

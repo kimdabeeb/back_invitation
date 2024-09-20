@@ -6,14 +6,8 @@ const Host = () => {
   const { groom, bride } = data.greeting.host;
   return (
     <HostContainer>
-      <p>
-        신랑
-        <HostInfo person={groom} />
-      </p>
-      <p>
-        신부
-        <HostInfo person={bride} />
-      </p>
+      <p>신랑<HostInfo person={groom} /></p>
+      <p>신부<HostInfo person={bride} /></p>
     </HostContainer>
   );
 };

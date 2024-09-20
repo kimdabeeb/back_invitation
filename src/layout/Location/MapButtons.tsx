@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import Button from '@/components/Button.tsx';
+import NaverMap from '@/assets/icons/naver_map.png?url';
+import KakaoMap from '@/assets/icons/kakao_map.png?url';
 
 const MapButtons = () => {
   const { naverMap, kakaoMap } = data.mapInfo;
 
   return (
     <MapButtonWrapper>
-      <Button onClick={() => window.open(naverMap)}>네이버 지도</Button>
-      <Button onClick={() => window.open(kakaoMap)}>카카오맵</Button>
+      <Button onClick={() => window.open(naverMap)}><img src={NaverMap} />네이버지도</Button>
+      <Button onClick={() => window.open(kakaoMap)}><img src={KakaoMap} />카카오맵</Button>
     </MapButtonWrapper>
   );
 };
@@ -16,8 +17,34 @@ const MapButtons = () => {
 export default MapButtons;
 
 const MapButtonWrapper = styled.div`
-  margin: 8px;
+  width: 100%;
+  margin: 8px 0;
   display: flex;
   gap: 8px;
   justify-content: center;
 `;
+
+const Button = styled.button`
+  width: 50%;
+  margin: 10px 0;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  /* padding: 0.5em 0.8em;
+  border-radius: 8px;
+  border: 1px solid #dfdfdf; */
+  outline: none;
+  box-shadow: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  text-decoration: none;
+  gap: 15px;
+  & img {
+    width: 25px;
+    aspect-ratio: 1/1;
+  }
+`.withComponent('a');

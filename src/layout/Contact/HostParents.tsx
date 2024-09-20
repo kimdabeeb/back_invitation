@@ -6,10 +6,10 @@ import { BrideAndGroomParents } from '@/types/data.ts';
 const HostParents = () => {
   const { groom, bride } = data.greeting.host;
   return (
-      <HostContainer>
-        <HostInfo person={groom} />
-        <HostInfo person={bride} />
-      </HostContainer>
+    <HostContainer className="pd-w">
+      <HostInfo person={groom} />
+      <HostInfo person={bride} />
+    </HostContainer>
   );
 };
 
@@ -43,21 +43,53 @@ const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
 };
 
 const HostContainer = styled.div`
-  width: 90%;
-  gap: 10px;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  box-sizing: border-box;
+  background: #e4edf1;
+  gap: 25px;
   display: flex;
   flex-direction: column;
-  margin: 3rem auto 2rem;
   font-family: 'GowunBatang';
-  & div > div:first-of-type {
-    font-weight: 600;
-  }
-  & div:last-of-type > div {
+  /* & div:last-of-type > div {
     width: 40px;
     & div:last-of-type {
       margin-left: 8px;
     }
-  } 
+  } */
+  div:nth-of-type(1) > div,
+  div:nth-of-type(3) > div {
+    font-weight: 400;
+  }
+
+  div:nth-of-type(3) {
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: 2rem;
+  }
+
+  div:nth-of-type(4) > p:last-child::before {
+    content: 'bride';
+  }
+
+  div:nth-of-type(2) > p:last-child::before {
+    content: 'groom';
+    font-size: 0.75rem;
+    font-weight: 400;
+    position: absolute;
+    top: -5px;
+    right: 35px;
+  }
+
+  div:nth-of-type(4) > p:last-child::before {
+    content: 'bride';
+    font-size: 0.75rem;
+    font-weight: 400;
+    position: absolute;
+    top: -5px;
+    right: 35px;
+  }
 `;
 
 const HostDetails = styled.div`
@@ -91,7 +123,11 @@ const HighlightedName = styled.div`
   display: flex;
   justify-content: space-between;
   & p {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: #eee;
+  }
+  & p:last-child {
+    font-weight: bold;
+    position: relative;
   }
 `;

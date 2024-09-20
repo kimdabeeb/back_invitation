@@ -23,7 +23,7 @@ const Invitation = () => {
   //direction={"up"}
   return (
     <>
-      <InvitationWrapper>
+      <InvitationWrapper className='pd-w'>
         <Fade cascade damping={0.3}>
           <ul className="IntroTit">
             <li>
@@ -73,5 +73,5 @@ const InvitationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-top: 5rem;
+  padding-bottom: 0;
 `;

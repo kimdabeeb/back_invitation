@@ -11,7 +11,7 @@ import images from '@/layout/Gallery/Images.ts';
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
-    objectFit: 'contain',
+    objectFit: 'cover',
     width: '100%',
     // aspectRatio: '1/1'
   };
@@ -22,7 +22,14 @@ const PhotoGallery = () => {
         <Swiper
           modules={[Pagination]}
           slidesPerView={1}
-          pagination={{ type: 'fraction', clickable: true }}>
+          pagination={{ type: 'fraction', clickable: true }}
+          // breakpoints={{
+          //   768: {
+          //     slidesPerView: 1.2,
+          //     spaceBetween: 30,
+          //   },
+          // }}>
+        >
           {images.map((image, index) => {
             return (
               <SwiperSlide key={index}>
@@ -50,8 +57,6 @@ export default PhotoGallery;
 
 const ContentsWrap = styled.div`
   width: 100%;
-  padding: 0 18px;
-  box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;

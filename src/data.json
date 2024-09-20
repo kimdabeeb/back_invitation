@@ -3,7 +3,7 @@
     "title": "000\n000",
     "host": {
       "groom": {
-        "name": "최영준",
+        "name": "영준",
         "relation": "아들",
         "position": "신랑",
         "parents": [
@@ -18,7 +18,7 @@
         ]
       },
       "bride": {
-        "name": "김다빈",
+        "name": "다빈",
         "relation": "딸",
         "position": "신부",
         "parents": [
@@ -89,25 +89,11 @@
     }
   ],
   "mapInfo": {
-    "address1": "웨딩 여율리",
-    "address2": "서울 영등포구 국제금융로6길 26\n한국노총빌딩 5층\n02-6277-0777",
+    "address1": "웨딩 여율리 5층",
+    "address2": "서울 영등포구 국제금융로6길 26",
     "naverMap": "https://map.naver.com/p/directions/-/14129458.7483733,4512095.3697976,%EC%9B%A8%EB%94%A9%EC%97%AC%EC%9C%A8%EB%A6%AC,30811749,PLACE_POI/-/transit?c=15.00,0,0,0,dh",
     "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,489503,1123003&rt1=&rt2=%EC%97%AC%EC%9C%A8%EB%A6%AC%EC%9B%A8%EB%94%A9%ED%99%80&rtIds=,630786038",
     "lat": 37.54222,
     "lon": 126.952708
-  },
-  "locationInfo": [
-    {
-      "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5호선·9호선 여의도역 5번 출구 (도보 3분)"
-    },
-    {
-      "title": "\uD83D\uDCCD 버스",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5호선 여의도역 7번 출구 (도보 5분)\n\uD83D\uDC49\uD83C\uDFFB 9호선 여의도역 10번 출구 (도보 30초)"
-    },
-    {
-      "title": "\uD83D\uDCCD 자차",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 내비게이션 : '웨딩여율리' 검색 \n 서울 영등포구 국제금융로6길 \n 건물 내 지하 및 여의도포스트타워 2시간 무료주차(안내데스크에서 주차권 수령)"
-    }
-  ]
+  }
 }

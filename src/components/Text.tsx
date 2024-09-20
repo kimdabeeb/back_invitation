@@ -13,10 +13,10 @@ export const MainTitEn = styled.p`
   /* font-family: 'Gilda Display', serif; */
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: rgb(17, 17, 17);
   opacity: 0.9;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
 `;
 
 export const SubTit = styled.p`

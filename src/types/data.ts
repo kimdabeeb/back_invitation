@@ -1,8 +1,7 @@
 export interface IData {
-  emojis: string[];
   greeting: IGreeting;
   hostInfo: IHostInfo[];
-  locationInfo: ILocationInfo[];
+  // locationInfo: ILocationInfo[];
   mapInfo: IMapInfo;
 }
 
@@ -56,7 +55,17 @@ export interface IMapInfo {
   lon: number;
 }
 
-export interface ILocationInfo {
-  title: string;
-  desc: string;
-}
+// export interface ILocationInfo {
+//   title1: string;
+//   desc1: string;
+//   title2: string;
+//   desc2: string; 
+//   desc21: string; 
+//   desc22: string; 
+//   desc23: string; 
+//   desc24: string; 
+//   title3: string;
+//   desc3: string; 
+//   title4: string;
+//   desc4: string;
+// }

@@ -93,13 +93,16 @@ ul {
   list-style: none;
 }
 
+.pd-w {
+  padding: 4rem 1.5625rem;
+  box-sizing: border-box;
+}
 
 /* ko */
 @font-face {
   font-family: 'GowunDodum';
-  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Ryuyanghee/GowunDodum-Regular.woff') format('woff');
+  src: url('../src/assets/fonts/GowunDodum-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -115,19 +118,9 @@ ul {
 }
 
 @font-face {
-  font-family: 'NanumSquareLight';
-  src: url('../src/assets/fonts/NanumSquareL.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'NanumSquare';
-  src: url('../src/assets/fonts/NanumSquareR.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Pretendard', sans-serif;
   src: url('../src/assets/fonts/Pretendard-Light.woff2') format('woff2');
-  font-weight: 200;
+  font-weight: 300;
 }
 
 @font-face {

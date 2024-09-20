@@ -1,7 +1,9 @@
-.pswp__button.pswp__button--zoom {
+.pswp__button.pswp__button--zoom,
+.pswp--has_mouse .pswp__button--arrow {
   display: none!important;
 }
 
+.swiper,
 .swiper-slide {
   width: 100%!important;
 }
@@ -14,3 +16,4 @@
 .swiper-pagination-fraction > span {
   font-size: .9375rem;
 }
+

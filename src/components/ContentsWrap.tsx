@@ -8,8 +8,6 @@ export const Wrapper = styled.section`
   width: 100%;
   /* max-width: 85vw; */
   margin: 0 auto;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,9 +17,7 @@ export const Wrapper = styled.section`
 
 export const GalleryWrapper = styled.section`
   width: 100%;
-  padding: 20px 0;
-  box-sizing: border-box;
-  margin: 3rem auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;

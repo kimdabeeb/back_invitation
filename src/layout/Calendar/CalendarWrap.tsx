@@ -1,4 +1,3 @@
-import { Fade } from 'react-awesome-reveal';
 import Calendar from 'react-calendar';
 import moment from 'moment';
 import data from 'data.json';
@@ -9,6 +8,7 @@ import 'react-calendar/dist/Calendar.css';
 const CalendarWrap = () => {
   const { greeting } = data;
   const marks = ['01-03-2025'];
+  const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
   //direction={"up"}
   return (
@@ -18,7 +18,7 @@ const CalendarWrap = () => {
           <MainTitEn>March 1, 2025</MainTitEn>
         </ShowCalendar>
       </Fade> */}
-      <CalendarContainer>
+      <CalendarContainer className="pd-w">
         <MainTitEn>WEDDING DAY</MainTitEn>
         <PointTitle style={{ fontWeight: '400' }}>{greeting.eventDay}</PointTitle>
         <PointTitle style={{ fontWeight: '300', color: '#111' }}>
@@ -30,20 +30,20 @@ const CalendarWrap = () => {
           calendarType="gregory"
           showNeighboringMonth={false}
           minDetail="month"
+          prevLabel={null}
+          nextLabel={null}
           prev2Label={null}
           next2Label={null}
           formatDay={(local, date) => date.toLocaleString('en', { day: 'numeric' })}
-          tileClassName={({ date, view }) => {
-            if (marks.find((x) => x === moment(date).format('DD-MM-YYYY'))) {
-              return 'highlight';
-            }
+          defaultActiveStartDate={new Date(2025, 2, 1)}
+          tileClassName={({ date }) => {
+            return moment(date).isSame(markedDate, 'day') ? 'highlight' : '';
           }}
         />
       </CalendarContainer>
       <style>{`
       .react-calendar * {
         text-decoration: unset!important;
-        color: #000;
       }
       
       .react-calendar {
@@ -55,36 +55,52 @@ const CalendarWrap = () => {
         width: auto;
         border-top: 1px solid #e5e7eb;
 
-      .react-calendar__tile--active,
       .highlight {
-        background: #fffcae;
+        background: #fff3ae;
+        color: #482808;
+        font-weight: bold;
         border-radius: 50%;
         max-width: 38px!important;
         position: relative;
         left: 4px;
       }
+      
+      .react-calendar__tile--active,
       .react-calendar__navigation__label {
+        background: #fff;
         font-family: GowunBatang;
         color:#000;
-      } 
+      }
+
+      .react-calendar__month-view__days__day--neighboringMonth{
+        color: #5F5F5F;
+      }
+
       .react-calendar__navigation {
         width: inherit;
         display: flex;
         text-align: center;
         align-items: center;
         padding: 0 .5rem;
-          .react-calendar__navigation__label {
-            width: 5.5rem;
-            height: 1.375rem;
-            font-size: 16px;
-            border: none;
-            font-weight: 700;
-            background-color: #fff;
-          }
-          .react-calendar__navigation button:enabled:hover, 
-          .react-calendar__navigation button:enabled:focus {
-              background-color: transparent;
-          }
+
+        .react-calendar__navigation button {
+          font-size: 1rem;
+          min-width: 20px;
+        }
+
+        .react-calendar__navigation__label {
+          width: 5.5rem;
+          height: 1.375rem;
+          font-size: 16px;
+          border: none;
+          font-weight: 700;
+          background-color: #fff;
+        }
+      }
+      .react-calendar__tile--active:enabled:hover,
+      .react-calendar__navigation button:enabled:hover, 
+      .react-calendar__navigation button:enabled:focus {
+          background-color: unset;
       }
     }
     `}</style>
@@ -96,7 +112,6 @@ export default CalendarWrap;
 
 const CalendarContainer = styled.div`
   width: 100%;
-  margin: 20px auto 0;
 `;
 
 const ShowCalendar = styled.div`
