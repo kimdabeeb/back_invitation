@@ -56,16 +56,12 @@ export interface IMapInfo {
 }
 
 // export interface ILocationInfo {
-//   title1: string;
-//   desc1: string;
-//   title2: string;
-//   desc2: string; 
-//   desc21: string; 
-//   desc22: string; 
-//   desc23: string; 
-//   desc24: string; 
-//   title3: string;
-//   desc3: string; 
-//   title4: string;
-//   desc4: string;
+//   title: string;
+//   desc: string;
 // }
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}

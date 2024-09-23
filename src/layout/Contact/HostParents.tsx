@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
 import data from 'data.json';
 import { BrideAndGroomParents } from '@/types/data.ts';
@@ -7,8 +8,12 @@ const HostParents = () => {
   const { groom, bride } = data.greeting.host;
   return (
     <HostContainer className="pd-w">
-      <HostInfo person={groom} />
-      <HostInfo person={bride} />
+      <Fade triggerOnce direction={'down'} duration={1500}>
+        <HostInfo person={groom} />
+      </Fade>
+      <Fade triggerOnce direction={'down'} duration={1700}>
+        <HostInfo person={bride} />
+      </Fade>
     </HostContainer>
   );
 };
@@ -17,8 +22,8 @@ export default HostParents;
 
 const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
   return (
-    <>
-      <HostDetails>
+    <div style={{display:'flex', flexDirection:'column', rowGap: '2rem'}}>
+      <HostDetails >
         {person.parents && (
           <>
             {person.parents.map((parent, index) => (
@@ -38,7 +43,7 @@ const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
         <p>{person.position}</p>
         <p>{person.name}</p>
       </HighlightedName>
-    </>
+    </div>
   );
 };
 
@@ -63,14 +68,10 @@ const HostContainer = styled.div`
     font-weight: 400;
   }
 
-  div:nth-of-type(3) {
-    border-top: 1px solid #eee;
+  > div:nth-of-type(2) {
+    border-top: 1px solid #ddd;
     margin-top: 1rem;
     padding-top: 2rem;
-  }
-
-  div:nth-of-type(4) > p:last-child::before {
-    content: 'bride';
   }
 
   div:nth-of-type(2) > p:last-child::before {
@@ -99,10 +100,9 @@ const HostDetails = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: .9375rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #eee;
-  line-height: 2;
+  color: #262626;
   width: 100%;
 `;
 
@@ -112,7 +112,7 @@ const RelationText = styled.div`
   width: 50px;
   display: flex;
   gap: 6px;
-  color: #eee;
+  color: #757575;
 `;
 
 const Relation = styled.div`
@@ -123,8 +123,8 @@ const HighlightedName = styled.div`
   display: flex;
   justify-content: space-between;
   & p {
-    font-size: 1rem;
-    color: #eee;
+    font-size: .9375rem;
+    color: #262626;
   }
   & p:last-child {
     font-weight: bold;

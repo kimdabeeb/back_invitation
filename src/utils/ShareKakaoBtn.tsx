@@ -2,9 +2,7 @@ import styled from '@emotion/styled';
 import UpNarrow from '@/assets/icons/upnarrow.png?url';
 import { SubTit } from '@/components/Text';
 
-
-export default function ShareKakaoBtn() {
-
+function ShareKakaoBtn() {
   const shareKakao = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
@@ -46,6 +44,8 @@ export default function ShareKakaoBtn() {
     </KakaoButton>
   );
 };
+
+export default ShareKakaoBtn;
 
 const KakaoButton = styled.button`
   width: 100%;

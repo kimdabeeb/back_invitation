@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
 import data from 'data.json';
 import AccountDetail from './AccountDetail.tsx';
@@ -7,11 +8,15 @@ import { MainTit, SubTit } from '@/components/Text';
 const Account = () => {
   const { hostInfo } = data;
   return (
-    <AccountWrap className='pd-w'>
-      <div className='text-wrap'>
+    <AccountWrap className="pd-w">
+      <Fade cascade direction={'up'} damping={0.3} duration={800} className="text-wrap">
         <MainTit>마음 전하실 곳</MainTit>
-        <SubTit>참석이 어려우신 분들을 위해 기재하였습니다<br />너그러운 마음으로 양해부탁드립니다</SubTit>
-      </div>
+        <SubTit>
+          참석이 어려우신 분들을 위해 기재하였습니다
+          <br />
+          너그러운 마음으로 양해부탁드립니다
+        </SubTit>
+      </Fade>
       <HostInfoWrapper>
         {hostInfo.map((host) => {
           return (
@@ -68,7 +73,6 @@ const AccountWrap = styled.div`
     }
   }
 `;
-
 
 const HostInfoWrapper = styled.div`
   width: 95%;

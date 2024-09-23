@@ -6,8 +6,7 @@ const Host = () => {
   const { groom, bride } = data.greeting.host;
   return (
     <HostContainer>
-      <p>신랑<HostInfo person={groom} /></p>
-      <p>신부<HostInfo person={bride} /></p>
+      <p>신랑<HostInfo person={groom} /> · 신부<HostInfo person={bride} /></p>
     </HostContainer>
   );
 };
@@ -20,16 +19,15 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
   );
 };
 
-
 const HostContainer = styled.div`
   gap: 35px;
   display: flex;
   align-items: center;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 2;
-  color: #eee;
-  font-family: 'GowunBatang';
+  color: #020817;
+  font-family: 'GowunDodum';
 `;
 
 const HostDetails = styled.span`

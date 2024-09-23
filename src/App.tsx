@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
-import { MainTitEn } from '@/components/Text';
 import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
 import Main from '@/layout/Main/Main';
 import Footer from '@/layout/Main/Footer';
@@ -49,13 +48,11 @@ function App() {
         </Wrapper>
         <HostParents />
         <GalleryWrapper ref={galleryRef} className="pd-w">
-          <MainTitEn>Gallery</MainTitEn>
           <PhotoGallery />
         </GalleryWrapper>
         <Wrapper>
           <Location />
           <Notification />
-          {/* <SubTit></SubTit> */}
           <Account />
           <ThanksTo />
         </Wrapper>

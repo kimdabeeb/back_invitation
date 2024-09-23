@@ -4,28 +4,22 @@ import data from 'data.json';
 import styled from '@emotion/styled';
 import { MainTitEn, PointTitle } from '@/components/Text.tsx';
 import 'react-calendar/dist/Calendar.css';
+import 'moment/locale/ko';
 
 const CalendarWrap = () => {
   const { greeting } = data;
   const marks = ['01-03-2025'];
   const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
-  //direction={"up"}
   return (
     <>
-      {/* <Fade>
-        <ShowCalendar>
-          <MainTitEn>March 1, 2025</MainTitEn>
-        </ShowCalendar>
-      </Fade> */}
       <CalendarContainer className="pd-w">
-        <MainTitEn>WEDDING DAY</MainTitEn>
-        <PointTitle style={{ fontWeight: '400' }}>{greeting.eventDay}</PointTitle>
-        <PointTitle style={{ fontWeight: '300', color: '#111' }}>
-          Saturday, March 1, 2025 | PM 15:40
+        <MainTitEn style={{ marginBottom: '2.5rem' }}>WEDDING DAY</MainTitEn>
+        <PointTitle style={{ fontWeight: '400' }}>
+          {greeting.eventDay}
+          <p style={{ fontWeight: '300', color: '#111' }}>Saturday, March 1, 2025 | PM 15:40</p>
         </PointTitle>
         <Calendar
-          locale="ko"
           selectRange={false}
           calendarType="gregory"
           showNeighboringMonth={false}
@@ -34,7 +28,7 @@ const CalendarWrap = () => {
           nextLabel={null}
           prev2Label={null}
           next2Label={null}
-          formatDay={(local, date) => date.toLocaleString('en', { day: 'numeric' })}
+          formatDay={(locale, date) => moment(date).format('DD')}
           defaultActiveStartDate={new Date(2025, 2, 1)}
           tileClassName={({ date }) => {
             return moment(date).isSame(markedDate, 'day') ? 'highlight' : '';
@@ -50,7 +44,7 @@ const CalendarWrap = () => {
         font-family: GowunBatang;
         border: none;
         max-width: 320px;
-        margin: 30px auto 0;
+        margin: 3rem auto 0;
         padding-top: 25px;
         width: auto;
         border-top: 1px solid #e5e7eb;
@@ -112,14 +106,4 @@ export default CalendarWrap;
 
 const CalendarContainer = styled.div`
   width: 100%;
-`;
-
-const ShowCalendar = styled.div`
-  background-color: saddlebrown;
-  width: 100%;
-  aspect-ratio: 1/1;
-  & p {
-    color: #fff;
-    font-size: 2rem;
-  }
 `;

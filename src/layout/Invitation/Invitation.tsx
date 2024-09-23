@@ -23,8 +23,8 @@ const Invitation = () => {
   //direction={"up"}
   return (
     <>
-      <InvitationWrapper className='pd-w'>
-        <Fade cascade damping={0.3}>
+      <InvitationWrapper className="pd-w">
+        <Fade triggerOnce cascade damping={0.3}>
           <ul className="IntroTit">
             <li>
               우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
@@ -44,13 +44,21 @@ const Invitation = () => {
             </Caption> 
           </Fade> */}
         </Fade>
-        <Fade cascade delay={2000}>
+        <Fade triggerOnce cascade delay={1800}>
           <Host />
         </Fade>
       </InvitationWrapper>
+      <div
+        style={{
+          marginTop: '3rem',
+          width: '100%',
+          aspectRatio: '1/1.5',
+          background: '#3c78d8',
+        }}></div>
       <style>{`
         .IntroTit {
-          font-size: 0.75rem;
+          font-size: 0.875rem;
+          color: #555;
           & li {
             line-height: 3;
           }
@@ -58,7 +66,7 @@ const Invitation = () => {
             margin-bottom: 3rem;
             line-height: 2.5;
             & span {
-            font-size: 0.6875rem;
+            font-size: 0.75rem;
           }
         }
     `}</style>

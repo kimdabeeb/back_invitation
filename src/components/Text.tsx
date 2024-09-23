@@ -9,14 +9,12 @@ export const MainTit = styled.p`
 
 export const MainTitEn = styled.p`
   font-family: 'SometimesTimes';
-  /* font-family: 'Ibarra Real Nova', serif; */
-  /* font-family: 'Gilda Display', serif; */
+  letter-spacing: 1.5px;
   font-weight: 400;
   font-style: normal;
   font-size: 2.25rem;
   color: rgb(17, 17, 17);
   opacity: 0.9;
-  margin-bottom: 2.25rem;
 `;
 
 export const SubTit = styled.p`
@@ -24,6 +22,15 @@ export const SubTit = styled.p`
   font-size: 0.9375rem;
   font-weight: bold;
   align-self: flex-start;
+`;
+
+export const SubTitKR = styled.p`
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 200;
+  letter-spacing: -.35px;
+  word-spacing: -.35px;
+  margin: 1.25rem auto;
 `;
 
 export const SubTitEn = styled.p`
@@ -34,12 +41,10 @@ export const SubTitEn = styled.p`
 
 export const PointTitle = styled.p`
   font-family: 'GowunBatang';
-  line-height: 2;
-  margin: 0;
+  font-size: 0.95rem;
+  line-height: 2.2;
   color: #666;
-  white-space: pre-line;
 `;
-
 
 export const Caption = styled.p<{ textAlign?: string }>`
   font-size: .9375rem;

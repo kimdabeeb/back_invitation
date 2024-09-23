@@ -37,25 +37,25 @@ const AccountDetail = ({
         <Name>{name}</Name>
       </Info>
       <Details>
-        <AccountInfo>
           {bank} {account}
-        </AccountInfo>
-        <CopyButton onClick={handleCopy}>
-          <Copy fill="#dfdfdf" />
-        </CopyButton>
+        <AccountMethod>
+          <CopyButton onClick={handleCopy}>
+            <Copy fill="#eee" />
+          </CopyButton>
+          <AccountLinks>
+            {kakaopayAccount && (
+              <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
+                <KakaopayImg src={kakaopay} alt="kakaopay" />
+              </AccountButton>
+            )}
+            {tossAccount && (
+              <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
+                <TossImg src={toss} alt="toss" />
+              </AccountButton>
+            )}
+          </AccountLinks>
+        </AccountMethod>
       </Details>
-      <AccountLinks>
-        {kakaopayAccount && (
-          <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
-            <KakaopayImg src={kakaopay} alt="kakaopay" />
-          </AccountButton>
-        )}
-        {tossAccount && (
-          <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
-            <TossImg src={toss} alt="toss" />
-          </AccountButton>
-        )}
-      </AccountLinks>
     </Wrapper>
   );
 };
@@ -95,6 +95,12 @@ const Details = styled.div`
   justify-content: space-between;
 `;
 
+const AccountMethod = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
@@ -124,7 +130,6 @@ const AccountButton = styled.button`
   text-decoration: none;
   outline: none;
   box-shadow: none;
-  background: white;
 `.withComponent('a');
 
 
@@ -135,7 +140,5 @@ const KakaopayImg = styled.img`
 const TossImg = styled.img`
   width: 70px;
 `;
-
-const AccountInfo = styled.div``;
 
 export default AccountDetail;

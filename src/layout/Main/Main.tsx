@@ -7,8 +7,6 @@ const Main = () => {
   return (
     <MainWrap>
       <MainImg src={mainImg} />
-      {/* <MainTitle>{greeting.title}</MainTitle>
-      <SubTitle>{greeting.eventDetail}</SubTitle> */}
     </MainWrap>
   );
 };
@@ -31,12 +29,4 @@ const MainImg = styled.img`
   width: 100%;
   max-width: 950px;
   /* aspect-ratio: 1/1.8; */
-`;
-
-
-const SubTitle = styled.p`
-  font-size: 0.8125rem;
-  color: #000000;
-  line-height: 2;
-  white-space: pre-line;
 `;

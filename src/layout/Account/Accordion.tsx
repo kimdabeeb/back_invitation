@@ -1,4 +1,5 @@
 import { ReactNode, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
 import ExpandMore from '@/assets/icons/expand_more.svg?react';
 
@@ -14,13 +15,17 @@ const Accordion = ({ title, children }: IAccordionProps) => {
   };
 
   return (
-    <AccordionWrapper>
-      <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
-        <p>{title}에게</p>
-        <span><ExpandMore fill="#ddd" /></span>
-      </AccordionHeader>
-      {isOpen && <AccordionContent>{children}</AccordionContent>}
-    </AccordionWrapper>
+    <Fade direction={'up'} duration={1200}>
+      <AccordionWrapper>
+        <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
+          <p>{title}에게</p>
+          <span>
+            <ExpandMore fill="#ddd" />
+          </span>
+        </AccordionHeader>
+        {isOpen && <AccordionContent>{children}</AccordionContent>}
+      </AccordionWrapper>
+    </Fade>
   );
 };
 

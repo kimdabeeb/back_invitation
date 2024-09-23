@@ -29,9 +29,6 @@ const Button = styled.button`
   margin: 10px 0;
   font-family: 'Pretendard', sans-serif;
   font-weight: 400;
-  /* padding: 0.5em 0.8em;
-  border-radius: 8px;
-  border: 1px solid #dfdfdf; */
   outline: none;
   box-shadow: none;
   font-size: 0.9rem;

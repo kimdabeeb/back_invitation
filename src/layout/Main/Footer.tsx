@@ -30,7 +30,7 @@ export default Footer;
 const SnsCont = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 2.25rem 30px;
+  padding: 2.25rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
