@@ -9,19 +9,21 @@ import { MainTitEn, PointTitle } from '@/components/Text.tsx';
 const Location = () => {
   const { mapInfo } = data;
   return (
-    <Fade duration={1500} className="pd-w">
-      <MainTitEn>Location</MainTitEn>
-      <LocationWrapper>
+    <div className="pd-w">
+      <Fade duration={1800}>
+        <MainTitEn>Location</MainTitEn>
         <PointTitle style={{ fontWeight: '600', padding: '2.25rem 0 2.5rem' }}>
           {mapInfo.address1}
           <p style={{ fontWeight: '400', fontSize: '.85rem' }}>{mapInfo.address2}</p>
         </PointTitle>
+      </Fade>
+      <LocationWrapper>
         {/* <Caption textAlign={'center'}>{mapInfo.address2}</Caption> */}
         <Map />
         <MapButtons />
         <Address />
       </LocationWrapper>
-    </Fade>
+    </div>
   );
 };
 

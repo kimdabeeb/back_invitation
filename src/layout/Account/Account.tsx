@@ -9,7 +9,7 @@ const Account = () => {
   const { hostInfo } = data;
   return (
     <AccountWrap className="pd-w">
-      <Fade cascade direction={'up'} damping={0.3} duration={800} className="text-wrap">
+      <Fade cascade direction={'up'} damping={0.3} duration={1500} className="text-wrap">
         <MainTit>마음 전하실 곳</MainTit>
         <SubTit>
           참석이 어려우신 분들을 위해 기재하였습니다

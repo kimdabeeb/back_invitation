@@ -15,7 +15,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
   };
 
   return (
-    <Fade direction={'up'} duration={1200}>
+    <Fade direction={'up'} duration={2000}>
       <AccordionWrapper>
         <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
           <p>{title}에게</p>

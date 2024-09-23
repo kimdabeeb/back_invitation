@@ -8,10 +8,10 @@ const HostParents = () => {
   const { groom, bride } = data.greeting.host;
   return (
     <HostContainer className="pd-w">
-      <Fade triggerOnce direction={'down'} duration={1500}>
+      <Fade direction={'down'} duration={1500}>
         <HostInfo person={groom} />
       </Fade>
-      <Fade triggerOnce direction={'down'} duration={1700}>
+      <Fade direction={'down'} duration={1700}>
         <HostInfo person={bride} />
       </Fade>
     </HostContainer>

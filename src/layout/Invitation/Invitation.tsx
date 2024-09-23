@@ -24,7 +24,7 @@ const Invitation = () => {
   return (
     <>
       <InvitationWrapper className="pd-w">
-        <Fade triggerOnce cascade damping={0.3}>
+        <Fade triggerOnce cascade damping={0.25} duration={1200}>
           <ul className="IntroTit">
             <li>
               우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
