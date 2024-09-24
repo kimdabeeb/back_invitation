@@ -1,19 +1,15 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
-import styled from '@emotion/styled';
 import data from 'data.json';
 import { BrideAndGroomParents } from '@/types/data.ts';
+import styled from '@emotion/styled';
 
 const HostParents = () => {
   const { groom, bride } = data.greeting.host;
+
   return (
-    <HostContainer className="pd-w">
-      <Fade direction={'down'} duration={1500}>
-        <HostInfo person={groom} />
-      </Fade>
-      <Fade direction={'down'} duration={1700}>
-        <HostInfo person={bride} />
-      </Fade>
+    <HostContainer className="pd-w gsap-div">
+      <HostInfo person={groom} />
+      <HostInfo person={bride} />
     </HostContainer>
   );
 };
@@ -48,7 +44,6 @@ const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
 };
 
 const HostContainer = styled.div`
-  width: 100%;
   padding-left: 35px;
   padding-right: 35px;
   box-sizing: border-box;
@@ -57,13 +52,6 @@ const HostContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'GowunBatang';
-  /* & div:last-of-type > div {
-    width: 40px;
-    & div:last-of-type {
-      margin-left: 8px;
-    }
-  } */
-  div:nth-of-type(1) > div,
   div:nth-of-type(3) > div {
     font-weight: 400;
   }
@@ -103,11 +91,11 @@ const HostDetails = styled.div`
   font-size: 1rem;
   font-weight: 600;
   color: #262626;
-  width: 100%;
 `;
 
 const RelationText = styled.div`
   font-size: 0.9rem;
+  margin: 0;
   line-height: 26px;
   width: 50px;
   display: flex;

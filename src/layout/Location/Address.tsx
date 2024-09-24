@@ -1,4 +1,3 @@
-import { Fade } from 'react-awesome-reveal';
 import styled from '@emotion/styled';
 import Car from '@/assets/icons/car.svg?react';
 import Bus from '@/assets/icons/bus.svg?react';
@@ -19,7 +18,9 @@ const Address = () => {
             서울시 영등포구 국제금융로6길 26
           </p>
         </li>
-        <hr />
+      </Way>
+      <hr />
+      <Way>
         <li>
           <p>
             <Bus />
@@ -44,7 +45,9 @@ const Address = () => {
             </li>
           </ul>
         </li>
-        <hr />
+      </Way>
+      <hr />
+      <Way>
         <li>
           <p>
             <Subway />
@@ -55,7 +58,9 @@ const Address = () => {
             여의도역 5번 출구 (도보 3분)
           </p>
         </li>
-        <hr />
+      </Way>
+      <hr />
+      <Way>
         <li>
           <p>
             <Parking />

@@ -109,11 +109,10 @@ const CopyButton = styled.button`
   outline: none;
   box-shadow: none;
   background: white;
-`;
+`.withComponent('a');
 
 const AccountLinks = styled.div`
   display: flex;
-  width: 100%;
   gap: 2px;
 `;
 

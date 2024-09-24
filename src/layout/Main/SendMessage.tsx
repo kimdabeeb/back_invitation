@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import { MainTitEn, PointTitle } from '@/components/Text.tsx';
 
-
-const ThanksTo = () => {
+const SendMessage = () => {
   return (
-    <Information className="pd-w">
+    <Information className="pd-w gsap-div">
       <MainTitEn>INFORMATION</MainTitEn>
       <PointTitle>안내</PointTitle>
       <PointTitle>사전 안내를 드립니다</PointTitle>
@@ -12,9 +11,8 @@ const ThanksTo = () => {
   );
 };
 
-export default ThanksTo;
+export default SendMessage;
 
 export const Information = styled.div`
-  width: 100%;
   background:#afc8d4;
 `;

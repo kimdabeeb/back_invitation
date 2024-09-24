@@ -12,29 +12,27 @@ const CalendarWrap = () => {
   const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
   return (
-    <>
-      <CalendarContainer className="pd-w">
-        <MainTitEn style={{ marginBottom: '2.5rem' }}>WEDDING DAY</MainTitEn>
-        <PointTitle style={{ fontWeight: '400' }}>
-          {greeting.eventDay}
-          <p style={{ fontWeight: '300', color: '#111' }}>Saturday, March 1, 2025 | PM 15:40</p>
-        </PointTitle>
-        <Calendar
-          selectRange={false}
-          calendarType="gregory"
-          showNeighboringMonth={false}
-          minDetail="month"
-          prevLabel={null}
-          nextLabel={null}
-          prev2Label={null}
-          next2Label={null}
-          formatDay={(locale, date) => moment(date).format('DD')}
-          defaultActiveStartDate={new Date(2025, 2, 1)}
-          tileClassName={({ date }) => {
-            return moment(date).isSame(markedDate, 'day') ? 'highlight' : '';
-          }}
-        />
-      </CalendarContainer>
+    <CalendarContainer className="pd-w gsap-div">
+      <MainTitEn style={{ marginBottom: '2.5rem' }}>WEDDING DAY</MainTitEn>
+      <PointTitle style={{ fontWeight: '400' }}>
+        {greeting.eventDay}
+        <p style={{ fontWeight: '300', color: '#111' }}>Saturday, March 1, 2025 | PM 15:40</p>
+      </PointTitle>
+      <Calendar
+        selectRange={false}
+        calendarType="gregory"
+        showNeighboringMonth={false}
+        minDetail="month"
+        prevLabel={null}
+        nextLabel={null}
+        prev2Label={null}
+        next2Label={null}
+        formatDay={(locale, date) => moment(date).format('DD')}
+        defaultActiveStartDate={new Date(2025, 2, 1)}
+        tileClassName={({ date }) => {
+          return moment(date).isSame(markedDate, 'day') ? 'highlight' : '';
+        }}
+      />
       <style>{`
       .react-calendar * {
         text-decoration: unset!important;
@@ -98,12 +96,11 @@ const CalendarWrap = () => {
       }
     }
     `}</style>
-    </>
+    </CalendarContainer>
   );
 };
 
 export default CalendarWrap;
 
 const CalendarContainer = styled.div`
-  width: 100%;
 `;

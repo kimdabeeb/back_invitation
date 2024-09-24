@@ -4,8 +4,6 @@ import styled from '@emotion/styled';
 import Host from '../Contact/Host.tsx';
 
 const Invitation = () => {
-  // 식주소 const { greeting } = data;
-
   useEffect(() => {
     const handleScroll = () => {
       document.querySelectorAll('div').forEach((item) => {
@@ -20,11 +18,10 @@ const Invitation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  //direction={"up"}
   return (
     <>
       <InvitationWrapper className="pd-w">
-        <Fade triggerOnce cascade damping={0.25} duration={1200}>
+        <Fade triggerOnce cascade damping={0.25} duration={1000}>
           <ul className="IntroTit">
             <li>
               우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
@@ -37,14 +34,6 @@ const Invitation = () => {
             <li>서약하는 자리에 기도와 축복으로 함께 해주신다면</li>
             <li>더 없는 감사와 기쁨으로간직하겠습니다.</li>
           </ul>
-          {/* <Fade delay={2000}>
-            <Host /> 
-            <Caption textAlign={'center'}>
-              {greeting.eventDetail}
-            </Caption> 
-          </Fade> */}
-        </Fade>
-        <Fade triggerOnce cascade delay={1800}>
           <Host />
         </Fade>
       </InvitationWrapper>
@@ -57,9 +46,8 @@ const Invitation = () => {
         }}></div>
       <style>{`
         .IntroTit {
-          font-size: 0.875rem;
-          color: #555;
-          & li {
+          li {
+            font-size: 0.875rem;
             line-height: 3;
           }
           & li:first-of-type {
@@ -83,3 +71,4 @@ const InvitationWrapper = styled.div`
   gap: 50px;
   padding-bottom: 0;
 `;
+

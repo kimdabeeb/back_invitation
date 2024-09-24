@@ -63,7 +63,6 @@ const PhotoGallery = () => {
 export default PhotoGallery;
 
 const ContentsWrap = styled.div`
-  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;

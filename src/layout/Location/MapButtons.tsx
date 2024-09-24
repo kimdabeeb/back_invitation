@@ -17,10 +17,9 @@ const MapButtons = () => {
 export default MapButtons;
 
 const MapButtonWrapper = styled.div`
-  width: 100%;
   margin: 8px 0;
-  display: flex;
   gap: 8px;
+  display: flex;
   justify-content: center;
 `;
 
@@ -32,8 +31,6 @@ const Button = styled.button`
   outline: none;
   box-shadow: none;
   font-size: 0.9rem;
-  cursor: pointer;
-  background: white;
   display: flex;
   align-items: center;
   justify-content: center;

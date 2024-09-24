@@ -15,21 +15,27 @@ const Footer = () => {
     );
   };
   return (
-    <SnsCont>
-      <ShareKakaoBtn />
-      <CopyButton type="button" onClick={handleCopy}>
-        <SubTit>청첩장 주소 복사하기</SubTit>
-        <Copy fill="#fff" />
-      </CopyButton>
-    </SnsCont>
+    <>
+      <div
+        style={{
+          width: '100%',
+          aspectRatio: '1/1.5',
+          background: '#a4c7ff',
+        }}></div>
+      <SnsCont>
+        <ShareKakaoBtn />
+        <CopyButton type="button" onClick={handleCopy}>
+          <SubTit>청첩장 주소 복사하기</SubTit>
+          <Copy fill="#fff" />
+        </CopyButton>
+      </SnsCont>
+    </>
   );
 };
 
 export default Footer;
 
 const SnsCont = styled.div`
-  width: 100%;
-  margin: 0 auto;
   padding: 2.25rem;
   box-sizing: border-box;
   display: flex;
@@ -38,8 +44,6 @@ const SnsCont = styled.div`
   gap: 12px;
 `;
 
-// const UpNarrow = styled.img`
-// `.withComponent('a');
 
 const CopyButton = styled.button`
   width: 100%;
