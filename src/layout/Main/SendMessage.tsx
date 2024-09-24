@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { MainTitEn, PointTitle } from '@/components/Text.tsx';
+import { MainTitEn, PointTitle, SubTitKR } from '@/components/Text.tsx';
 
 const SendMessage = () => {
   return (
@@ -10,7 +10,7 @@ const SendMessage = () => {
         <span>웨딩홀 사전 안내를 드립니다</span>
       </PointTitle>
       <Notice>
-      
+        {/* <SubTitKR>식장의 사정으로 화환은 정중히 사양합니다. 감사한 마음만 받겠습니다. </SubTitKR> */}
       </Notice>
     </Information>
   );
@@ -21,7 +21,7 @@ export default SendMessage;
 export const Information = styled.div`
   background: #eff3e8;
   > p {
-    padding: 1.25rem 0;
+    padding-bottom:2.5rem;
     color: #111;
     span {
       opacity: .7;
