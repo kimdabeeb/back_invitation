@@ -20,7 +20,7 @@ const Footer = () => {
         style={{
           width: '100%',
           aspectRatio: '1/1.5',
-          background: '#a4c7ff',
+          background: '#cfdab9',
         }}></div>
       <SnsCont>
         <ShareKakaoBtn />

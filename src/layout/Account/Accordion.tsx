@@ -42,7 +42,7 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
   align-items: center;
   justify-content: space-between;
   font-family: 'GowunDodum';
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   & > p {
     color: #a6a6a6;
   }
@@ -54,7 +54,7 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
 `;
 
 const AccordionContent = styled.div`
-  font-size: .8125rem;
+  font-size: .85rem;
   text-align: justify;
   padding: 10px;
 `;

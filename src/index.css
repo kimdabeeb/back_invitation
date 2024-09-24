@@ -71,7 +71,7 @@ body {
   font-family: 
   'GowunBatang',
   'NanumSquareLight',
-  'Pretendard',
+  'SUIT',
   'Continuous',
   'GowunDodum',
   'PlaypenSans',
@@ -129,16 +129,17 @@ ul {
 }
 
 @font-face {
-  font-family: 'Pretendard', sans-serif;
-  src: url('../src/assets/fonts/Pretendard-Light.woff2') format('woff2');
+  font-family: 'SUIT', sans-serif;
+  src: url('../src/assets/fonts/SUIT-Thin.woff2') format('woff2');
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Pretendard', sans-serif;
-  src: url('../src/assets/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-family: 'SUIT', sans-serif;
+  src: url('../src/assets/fonts/SUIT-Regular.woff2') format('woff2');
   font-weight: 400;
 }
+
 
 @font-face {
   font-family: 'Autography';
@@ -150,4 +151,9 @@ ul {
   font-family: 'SometimesTimes';
   src: url('../src/assets/fonts/SometimesTimes.ttf') format('truetype');
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'JakartaSignature';
+  src: url('../src/assets/fonts/JakartaSignature.ttf') format('truetype');
 }

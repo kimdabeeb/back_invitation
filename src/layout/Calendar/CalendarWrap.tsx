@@ -4,7 +4,6 @@ import data from 'data.json';
 import styled from '@emotion/styled';
 import { MainTitEn, PointTitle } from '@/components/Text.tsx';
 import 'react-calendar/dist/Calendar.css';
-import 'moment/locale/ko';
 
 const CalendarWrap = () => {
   const { greeting } = data;
@@ -19,6 +18,7 @@ const CalendarWrap = () => {
         <p style={{ fontWeight: '300', color: '#111' }}>Saturday, March 1, 2025 | PM 15:40</p>
       </PointTitle>
       <Calendar
+        locale="ko"
         selectRange={false}
         calendarType="gregory"
         showNeighboringMonth={false}
@@ -48,8 +48,8 @@ const CalendarWrap = () => {
         border-top: 1px solid #e5e7eb;
 
       .highlight {
-        background: #fff3ae;
-        color: #482808;
+        background: #8c9a6f;
+        color: #fff;
         font-weight: bold;
         border-radius: 50%;
         max-width: 38px!important;

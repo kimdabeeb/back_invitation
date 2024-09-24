@@ -8,7 +8,7 @@ const Host = () => {
   return (
     <HostContainer>
       <Fade triggerOnce cascade delay={1500}>
-        <p>신랑<HostInfo person={groom} /> · 신부<HostInfo person={bride} /></p>
+        <p>신랑<HostInfo person={groom} /><span>and</span>신부<HostInfo person={bride} /></p>
       </Fade>
     </HostContainer>
   );
@@ -27,15 +27,22 @@ const HostContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 400;
   line-height: 2;
   color: #020817;
   font-family: 'GowunDodum';
+  p > span:nth-of-type(2) {
+    font-family: 'JakartaSignature';
+    padding: 0 10px;
+    font-size: 1.125rem;
+    letter-spacing: -1px;
+  }
 `;
 
 const HostDetails = styled.span`
   white-space: nowrap;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 5px;
+  font-family: 'GowunDodum';
 `;

@@ -21,7 +21,6 @@ function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
   const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
-  const sectionRef = useRef(null);
 
     useEffect(() => {
       const smoother = ScrollSmoother.create({
@@ -42,11 +41,11 @@ function App() {
             duration: .8,
             scrollTrigger: {
               trigger: content,
-              markers: true,
+             // markers: true,
               start: 'top 85%',
               end: 'bottom bottom',
               toggleActions: 'play none none reverse',
-              // once: true,
+              once: true,
             },
           },
         );

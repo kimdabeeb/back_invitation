@@ -37,23 +37,21 @@ const AccountDetail = ({
         <Name>{name}</Name>
       </Info>
       <Details>
-          {bank} {account}
+        <p style={{whiteSpace:'nowrap'}}>{bank} {account}</p>
         <AccountMethod>
           <CopyButton onClick={handleCopy}>
-            <Copy fill="#eee" />
-          </CopyButton>
-          <AccountLinks>
-            {kakaopayAccount && (
-              <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
-                <KakaopayImg src={kakaopay} alt="kakaopay" />
-              </AccountButton>
-            )}
-            {tossAccount && (
-              <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
-                <TossImg src={toss} alt="toss" />
-              </AccountButton>
-            )}
-          </AccountLinks>
+          <Copy fill="#eee" />
+        </CopyButton>
+          {kakaopayAccount && (
+            <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
+              <KakaopayImg src={kakaopay} alt="kakaopay" />
+            </AccountButton>
+          )}
+          {tossAccount && (
+            <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
+              <TossImg src={toss} alt="toss" />
+            </AccountButton>
+          )}
         </AccountMethod>
       </Details>
     </Wrapper>
@@ -98,7 +96,7 @@ const Details = styled.div`
 const AccountMethod = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 `;
 
 const CopyButton = styled.button`
@@ -111,10 +109,6 @@ const CopyButton = styled.button`
   background: white;
 `.withComponent('a');
 
-const AccountLinks = styled.div`
-  display: flex;
-  gap: 2px;
-`;
 
 const AccountButton = styled.button`
   display: flex;
@@ -122,7 +116,6 @@ const AccountButton = styled.button`
   justify-content: center;
   margin: 5px 0;
   padding: 0 0.8em;
-  width: inherit;
   font-size: 0.7rem;
   gap: 2px;
   color: #1a1a1a;

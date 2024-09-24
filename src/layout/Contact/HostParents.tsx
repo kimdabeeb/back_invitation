@@ -47,7 +47,7 @@ const HostContainer = styled.div`
   padding-left: 35px;
   padding-right: 35px;
   box-sizing: border-box;
-  background: #e4edf1;
+  background: #f3f5f0;
   gap: 25px;
   display: flex;
   flex-direction: column;

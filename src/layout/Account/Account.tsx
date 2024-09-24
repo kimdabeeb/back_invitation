@@ -64,7 +64,7 @@ const AccountWrap = styled.div`
     }
 
     p:nth-of-type(2) {
-      font-size: 0.8125rem;
+      font-size: 0.85rem;
       line-height: 1.8;
       color: #545454;
     }

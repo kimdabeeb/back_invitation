@@ -87,6 +87,12 @@ const WayWrapper = styled.div`
   align-items: flex-start;
   margin: 20px 0px;
   gap: 20px;
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #afc18b;
+    margin-top: 1rem;
+  }
 `;
 
 const Way = styled.ul`
@@ -94,12 +100,12 @@ const Way = styled.ul`
   flex-direction: column;
   text-align: left;
   li > p:first-of-type {
-    color: #9985ad;
+    color: #afc18b;
   }
   li {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 400;
-    font-size: 0.825rem;
+    font-family: 'SUIT', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
     line-height: 1.85;
     color: #111;
     opacity: 0.9;
@@ -125,12 +131,5 @@ const Way = styled.ul`
         }
       }
     }
-  }
-
-  hr {
-    width: 100%;
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 1.5rem 0;
   }
 `;

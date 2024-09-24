@@ -26,7 +26,7 @@ const MapButtonWrapper = styled.div`
 const Button = styled.button`
   width: 50%;
   margin: 10px 0;
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'SUIT', sans-serif;
   font-weight: 400;
   outline: none;
   box-shadow: none;
