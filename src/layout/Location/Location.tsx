@@ -10,10 +10,8 @@ const Location = () => {
   return (
     <LocationWrapper className="pd-w gsap-div">
       <MainTitEn>Location</MainTitEn>
-      <PointTitle style={{ fontWeight: '600', padding: '2.25rem 0 2.5rem' }}>
-        {mapInfo.address1}
-        <p style={{ fontWeight: '400', fontSize: '.85rem' }}>{mapInfo.address2}</p>
-      </PointTitle>
+      <PointTitle style={{ fontWeight: '600', paddingTop: '1.5rem' }}>{mapInfo.address1}</PointTitle>
+      <PointTitle style={{ fontWeight: '400', fontSize: '.85rem', paddingBottom: '2.25rem' }}>{mapInfo.address2}</PointTitle>
       <Map />
       <MapButtons />
       <Address />

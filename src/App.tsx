@@ -34,14 +34,14 @@ function App() {
       contents.forEach((content) => {
         gsap.fromTo(
           content,
-          { opacity: 0, y: 20 },
+          { opacity: 0, y: 30 },
           {
             opacity: 1,
             y: 0,
-            duration: .8,
+            duration: 1.5,
             scrollTrigger: {
               trigger: content,
-             // markers: true,
+              markers: true,
               start: 'top 85%',
               end: 'bottom bottom',
               toggleActions: 'play none none reverse',

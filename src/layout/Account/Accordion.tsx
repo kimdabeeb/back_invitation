@@ -31,7 +31,7 @@ const AccordionWrapper = styled.div`
   border-radius: 8px;
   overflow: hidden;
   background: #f9f9f9;
-  padding: 12px 15px;
+  padding: 16px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   transition: all 0.3s ease-in-out;
@@ -42,7 +42,7 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
   align-items: center;
   justify-content: space-between;
   font-family: 'GowunDodum';
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   & > p {
     color: #a6a6a6;
   }

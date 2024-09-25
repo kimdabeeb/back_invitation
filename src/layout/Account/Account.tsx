@@ -12,9 +12,7 @@ const Account = () => {
         <MainTit>마음 전하실 곳</MainTit>
         <SubTit>
           참석이 어려우신 분들을 위해 기재하였습니다
-          <br />
-          너그러운 마음으로 양해부탁드립니다
-        </SubTit>
+          <br />너그러운 마음으로 양해부탁드립니다</SubTit>
       </div>
       <HostInfoWrapper>
         {hostInfo.map((host) => {
@@ -61,6 +59,7 @@ const AccountWrap = styled.div`
   & div.text-wrap {
     p:first-of-type {
       margin: 2rem auto 0.5rem;
+      font-weight: 600;
     }
 
     p:nth-of-type(2) {

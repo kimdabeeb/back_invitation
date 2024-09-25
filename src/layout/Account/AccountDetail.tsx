@@ -72,7 +72,7 @@ const Wrapper = styled.div`
 
 const Info = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 5px;
   margin: 5px 0;
 `;
@@ -85,6 +85,7 @@ const Relation = styled.span`
 
 const Name = styled.span`
   font-size: 0.8125rem;
+  margin-left: .35rem;
 `;
 
 const Details = styled.div`

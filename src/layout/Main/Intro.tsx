@@ -12,13 +12,12 @@ const Intro = () => {
 export default Intro;
 
 const MainWrap = styled.div`
-  aspect-ratio: 1/1.75;
-  padding: 2rem 1.5rem;
-  box-sizing: border-box;
+  /* aspect-ratio: 1/1.8; */
+  padding: 2rem 1.5rem 0;
 `;
 
 const MainImg = styled.img`
   border-radius: 500px 500px 0 0;
-  aspect-ratio: 1/2;
-  max-width: 950px;
+  aspect-ratio: 1/1.8;
+  max-width: 100%;
 `;

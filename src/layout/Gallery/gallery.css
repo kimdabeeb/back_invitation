@@ -17,3 +17,6 @@
   font-size: .9375rem;
 }
 
+.pswp__counter {
+  width: auto;
+}
