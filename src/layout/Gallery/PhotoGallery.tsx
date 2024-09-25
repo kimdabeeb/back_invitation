@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { MainTitEn, PointTitle } from '@/components/Text';
 import styled from '@emotion/styled';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'photoswipe/style.css';
 import '@/layout/Gallery/gallery.css'
@@ -26,19 +27,20 @@ const PhotoGallery = () => {
       <ContentsWrap>
         <Gallery>
           <Swiper
-            modules={[Pagination]}
-            slidesPerView={1}
-            pagination={{ type: 'fraction', clickable: true }}
-            // breakpoints={{
-            //   768: {
-            //     slidesPerView: 1.2,
-            //     spaceBetween: 30,
-            //   },
-            // }}>
-          >
+            modules={[Navigation, Pagination]}
+            style={{ overflow: 'visible' }}
+            slidesPerView={1.2}
+            spaceBetween={10}
+            centeredSlides={true}
+            loop={true}
+            pagination={{
+              type: 'fraction',
+              clickable: true,
+            }}
+            navigation={true}>
             {images.map((image, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide style={{ width: 'fit-content' }} key={index}>
                   <Item original={image.source} thumbnail={image.source} width="1920" height="1280">
                     {({ ref, open }) => (
                       <img
@@ -67,4 +69,5 @@ const ContentsWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `;

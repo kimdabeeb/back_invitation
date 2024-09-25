@@ -8,7 +8,8 @@ function ShareKakaoBtn() {
         const kakao = window.Kakao;
 
         if (!kakao.isInitialized()) {
-          kakao.init('496b33d8c0ec1a3264c146db9799eb78');
+          const kakapClientId = import.meta.env.VITE_APP_KAKAO_JAVASCRIPT_KEY;
+          kakao.init(kakapClientId);
         }
 
         kakao.Share.sendDefault({
@@ -19,7 +20,6 @@ function ShareKakaoBtn() {
             imageUrl:
               'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
             link: {
-              // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
               mobileWebUrl: 'http://localhost:5173',
               webUrl: 'http://localhost:5173',
             },

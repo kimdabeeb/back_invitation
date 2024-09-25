@@ -30,7 +30,7 @@ const AccordionWrapper = styled.div`
   margin-bottom: 15px;
   border-radius: 8px;
   overflow: hidden;
-  background: #f9f9f9;
+  background: #fff;
   padding: 16px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;

@@ -1,7 +1,7 @@
 import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
-import { SubTit } from '@/components/Text';
+import { SubTit, MainTitEn } from '@/components/Text';
 
 const Footer = () => {
   const handleCopy = () => {
@@ -28,6 +28,7 @@ const Footer = () => {
           <SubTit>청첩장 주소 복사하기</SubTit>
           <Copy fill="#fff" />
         </CopyButton>
+        <MainTitEn>Copyright 2024. daabiinii All rights reserved.</MainTitEn>
       </SnsCont>
     </>
   );
@@ -36,12 +37,17 @@ const Footer = () => {
 export default Footer;
 
 const SnsCont = styled.div`
-  padding: 2.25rem;
+  padding: 2.25rem 2.25rem 1.25rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  > p {
+    opacity: 1;
+    font-size: 0.625rem;
+    margin: 2rem auto 0.625rem;
+  }
 `;
 
 

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap-trial';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
 import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
-import { Container, GalleryWrapper } from '@/components/ContentsWrap';
+import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
 import Intro from '@/layout/Main/Intro';
 import Footer from '@/layout/Main/Footer';
 import Account from '@/layout/Account/Account.tsx';
@@ -15,45 +16,48 @@ import Location from '@/layout/Location/Location';
 import CalendarWrap from '@/layout/Calendar/CalendarWrap';
 import HostParents from './layout/Contact/HostParents';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
   const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
       const smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
-        smooth: 2,
+        smooth: 1.5,
         effects: true,
+        ignoreMobileResize: true,
       });
 
       const contents = document.querySelectorAll('.gsap-div');
       contents.forEach((content) => {
         gsap.fromTo(
           content,
-          { opacity: 0, y: 30 },
+          { opacity: 0, y: 20 },
           {
             opacity: 1,
             y: 0,
-            duration: 1.5,
+            duration: 1.2,
             scrollTrigger: {
               trigger: content,
               markers: true,
-              start: 'top 85%',
-              end: 'bottom bottom',
-              toggleActions: 'play none none reverse',
-              once: true,
+              start: 'top 75%',
+              //end: 'bottom bottom',
+              toggleActions: 'play none none none',
+              once: false,
             },
           },
         );
       });
       return () => {
-        smoother.kill(); 
+        smoother.kill();
       };
     }, []);
+
+
 
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
@@ -78,7 +82,7 @@ function App() {
   return (
     <NavermapsProvider ncpClientId={ncpClientId}>
       <Container id="smooth-wrapper">
-        <div id="smooth-content">
+        <Wrapper id="smooth-content">
           <Intro />
           <Invitation />
           <CalendarWrap />
@@ -91,7 +95,7 @@ function App() {
           <SendMessage />
           <Footer />
           <FloatingBar isVisible={isVisible} />
-        </div>
+        </Wrapper>
       </Container>
     </NavermapsProvider>
   );

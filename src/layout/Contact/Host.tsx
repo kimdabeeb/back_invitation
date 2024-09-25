@@ -7,7 +7,7 @@ const Host = () => {
   const { groom, bride } = data.greeting.host;
   return (
     <HostContainer>
-      <Fade triggerOnce cascade delay={1500}>
+      <Fade triggerOnce cascade delay={1400}>
         <p>신랑<HostInfo person={groom} /><span>and</span>신부<HostInfo person={bride} /></p>
       </Fade>
     </HostContainer>

@@ -25,7 +25,6 @@ export const SubTit = styled.p`
 export const SubTitKR = styled.p`
   font-family: 'SUIT', sans-serif;
   font-weight: 300;
-  letter-spacing: -0.35px;
   word-spacing: -0.35px;
   margin: 1.25rem auto;
 `;

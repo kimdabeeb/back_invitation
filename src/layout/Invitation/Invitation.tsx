@@ -38,6 +38,7 @@ const Invitation = () => {
         </Fade>
       </InvitationWrapper>
       <div
+        className="gsap-div"
         style={{
           marginTop: '3rem',
           width: '100%',
@@ -47,6 +48,9 @@ const Invitation = () => {
       <style>{`
         .IntroTit {
           li {
+            white-space: pre;
+            letter-spacing: -.15px;
+            word-spacing: -.35px;
             font-size: 0.875rem;
             line-height: 3;
           }
@@ -68,7 +72,7 @@ const InvitationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
   padding-bottom: 0;
 `;
 

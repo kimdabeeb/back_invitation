@@ -3,14 +3,20 @@
   display: none!important;
 }
 
-.swiper,
-.swiper-slide {
-  width: 100%!important;
+.swiper-slide {opacity: .2;}
+.swiper-slide-active { opacity: 1;}
+
+.swiper-button-prev,
+.swiper-button-next {top: unset!important; bottom: 0; color: #111!important; z-index: 99;}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1rem!important;
 }
 
 .swiper-pagination-fraction {
   position: relative!important;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .swiper-pagination-fraction > span {

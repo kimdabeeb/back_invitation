@@ -6,7 +6,7 @@ import Parking from '@/assets/icons/parking.svg?react';
 
 const Address = () => {
   return (
-    <WayWrapper>
+    <WayWrapper className='gsap-div'>
       <Way>
         <li>
           <p>

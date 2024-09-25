@@ -48,23 +48,24 @@ const CalendarWrap = () => {
         border-radius: 50%;
         max-width: 43px!important;
         position: relative;
-        left: 3px;
+        left: 0;
       }
       
-      .react-calendar__tile { padding-top: 13px; padding-bottom:13px; }
+      .react-calendar__tile { font-size: .95em; padding-top: 12px; padding-bottom:12px; }
       .react-calendar__tile--active,
       .react-calendar__navigation__label {
         background: #fff;
         font-family: GowunBatang;
         color:#000;
       }
+      .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__month-view__days__day--neighboringMonth {color: #5F5F5F;}
       .react-calendar__navigation {
-        width: inherit;
         display: flex;
         text-align: center;
         align-items: center;
         padding: 0 .5rem;
+        margin-bottom: 1rem;
           .react-calendar__navigation button {
             font-size: 1rem;
             min-width: 20px;

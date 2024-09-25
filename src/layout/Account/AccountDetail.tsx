@@ -63,6 +63,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
     margin-bottom: 0;
+    padding-bottom: 0;
     border-bottom: none;
   }
   display: flex;
@@ -96,7 +97,7 @@ const Details = styled.div`
 
 const AccountMethod = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-end;
 `;
 

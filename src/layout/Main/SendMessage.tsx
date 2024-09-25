@@ -26,8 +26,10 @@ export const Information = styled.div`
     font-weight: 600;
     span {
       opacity: 0.7;
-      padding-bottom: 2rem;
     }
+  }
+  > p:nth-of-type(2) {
+    padding-bottom: 2.5rem;
   }
 `;
 
@@ -42,9 +44,12 @@ export const Notice = styled.div`
     top: 50%;
     transform: translateY(-50%);
     white-space: pre-wrap;
+    word-break: keep-all;
     padding: 0 30px;
     box-sizing: border-box;
     color: #8c9a6f;
-    line-height: 1.8;
+    line-height: 2;
+    margin: 0;
+    font-weight: 500;
   }
 `;

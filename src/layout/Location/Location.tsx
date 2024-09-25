@@ -22,7 +22,8 @@ const Location = () => {
 export default Location;
 
 const LocationWrapper = styled.div`
-  background: #f3f5f0;
+  /* background: #f3f5f0; */
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
 `;
