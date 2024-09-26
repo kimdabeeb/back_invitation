@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
 import gsap from 'gsap-trial';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
+import { ScrollTrigger } from 'gsap-trial/dist/ScrollTrigger';
+import { ScrollSmoother } from 'gsap-trial/dist/ScrollSmoother';
 import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
 import Intro from '@/layout/Main/Intro';
 import Footer from '@/layout/Main/Footer';
@@ -43,7 +43,6 @@ function App() {
             duration: 1.2,
             scrollTrigger: {
               trigger: content,
-              markers: true,
               start: 'top 75%',
               //end: 'bottom bottom',
               toggleActions: 'play none none none',
@@ -56,7 +55,6 @@ function App() {
         smoother.kill();
       };
     }, []);
-
 
 
   useEffect(() => {
