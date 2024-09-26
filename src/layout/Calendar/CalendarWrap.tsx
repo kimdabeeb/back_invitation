@@ -16,7 +16,7 @@ const CalendarWrap = () => {
       <PointTitle style={{ fontWeight: '400' }}>{greeting.eventDay}</PointTitle>
       <PointTitle style={{ fontWeight: '300' }}>Saturday, March 1, 2025 | PM 15:40 </PointTitle>
       <Calendar
-        locale="ko"
+        formatDay={(locale = 'ko', date) => moment(date).locale(locale).format('D')}
         selectRange={false}
         calendarType="gregory"
         showNeighboringMonth={false}
@@ -25,8 +25,7 @@ const CalendarWrap = () => {
         nextLabel={null}
         prev2Label={null}
         next2Label={null}
-        formatDay={(locale, date) => moment(date).format('DD')}
-        defaultActiveStartDate={new Date(2025, 2, 1)}
+        activeStartDate={new Date(2025, 2, 1)}
         tileClassName={({ date }) => {
           return moment(date).isSame(markedDate, 'day') ? 'highlight' : '';
         }}
